@@ -1,28 +1,193 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>LIBERTY Dental Plan Member Portal - Registration</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0} html{font-size:16px} body{font-family:Roboto,sans-serif;background:#edf1f8;min-height:100vh;color:#1a2340}
-    a{color:#3352a3;text-decoration:none} a:hover{text-decoration:underline}
-    .topbar{background:#3352a3;color:#fff;padding:5px 0} .tb-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:13px}
-    .tb-btn{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;cursor:pointer;border-radius:3px;width:24px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
-    .site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.09);position:sticky;top:0;z-index:10}
-    .nav-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}.logo-img{height:48px;display:block}.nav-right{display:flex;align-items:center;gap:8px}
-    .btn-emg{background:none;border:2px solid #3352a3;color:#3352a3;border-radius:4px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
-    .main{max-width:1280px;margin:0 auto;padding:44px 20px 60px;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:start}@media (max-width:960px){.main{grid-template-columns:1fr;gap:24px}}
-    .hero-title{font-family:Nunito,sans-serif;font-size:clamp(32px,4vw,50px);font-weight:900;color:#1a2340;line-height:1.12;margin-bottom:14px}.hero-acc{color:#602D86}.hero-sub{font-size:15px;color:#4a5568;line-height:1.85;max-width:520px;margin-bottom:24px}
-    .acard{background:#fff;border-radius:10px;box-shadow:0 4px 28px rgba(51,82,163,.12);overflow:hidden}.acard-head{background:#3352a3;color:#fff;padding:14px 22px;text-align:center;font-size:17px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:8px}.acard-body{padding:22px 24px 20px}
-    .fg{margin-bottom:14px}.fg label{display:block;font-size:13px;font-weight:700;color:#333;margin-bottom:5px}.fg input{width:100%;padding:10px 13px;border:1px solid #ccc;border-radius:4px;font-size:15px;color:#333;background:#fff;transition:border .15s,box-shadow .15s;font-family:inherit}.fg input:focus{outline:none;border-color:#3352a3;box-shadow:0 0 0 3px rgba(51,82,163,.1)}
-    .btn-prim,.btn-sec{width:100%;border-radius:4px;padding:11px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit}.btn-prim{background:#3352a3;color:#fff;border:none}.btn-prim:disabled{background:#a3b4e0;cursor:not-allowed}.btn-sec{background:#fff;color:#3352a3;border:2px solid #3352a3}
-    .m-err{background:#fff3f3;border:1px solid #fcc;border-radius:4px;color:#721c24;padding:10px 12px;font-size:13px;margin-bottom:12px;line-height:1.5}.m-ok{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;color:#14532d;padding:16px;font-size:14px;text-align:center;line-height:1.7}.m-info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;color:#1e40af;padding:11px 13px;font-size:13px;line-height:1.6;margin-bottom:13px}
-    .otp-hint{text-align:center;font-size:13px;color:#555;margin-bottom:12px;line-height:1.5}.otp-target{font-weight:700;color:#3352a3}.steps-row{display:flex;align-items:center;margin-bottom:20px}.step-item{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;position:relative}.step-item:not(:last-child)::after{content:'';position:absolute;top:11px;left:50%;width:100%;height:1px;background:#e0e0e0;z-index:0}.step-dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;z-index:1}.s-done .step-dot,.s-act .step-dot{background:#3352a3;color:#fff}.s-idle .step-dot{background:#e8e8e8;color:#aaa}.step-lbl{font-size:10px;font-weight:600;color:#aaa;white-space:nowrap}.s-done .step-lbl,.s-act .step-lbl{color:#3352a3}
-    .footer{background:#1a2849;color:#8895b5;margin-top:auto}.fi{max-width:1280px;margin:0 auto;padding:28px 20px;font-size:12px}.spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}@keyframes spin{to{transform:rotate(360deg)}}
-  </style>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>LIBERTY Dental Plan Member Portal - Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:Roboto,sans-serif;background:#edf1f8;min-height:100vh;color:#1a2340}
+a{color:#3352a3;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#3352a3;color:#fff;padding:5px 0}.tb-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:13px}
+.tb-btn{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;cursor:pointer;border-radius:3px;width:24px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+.site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.09);position:sticky;top:0;z-index:10}
+.nav-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}.logo-img{height:48px;display:block}.nav-right{display:flex;align-items:center;gap:8px}
+.btn-emg{background:none;border:2px solid #3352a3;color:#3352a3;border-radius:4px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.main{max-width:1280px;margin:0 auto;padding:44px 20px 60px;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:start}@media(max-width:960px){.main{grid-template-columns:1fr;gap:24px}}
+.hero-title{font-family:Nunito,sans-serif;font-size:clamp(32px,4vw,50px);font-weight:900;color:#1a2340;line-height:1.12;margin-bottom:14px}.hero-acc{color:#602D86}
+.hero-sub{font-size:15px;color:#4a5568;line-height:1.85;max-width:520px;margin-bottom:24px}
+.acard{background:#fff;border-radius:10px;box-shadow:0 4px 28px rgba(51,82,163,.12);overflow:hidden}
+.acard-head{background:#3352a3;color:#fff;padding:16px 22px;text-align:center;font-size:17px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:8px}
+.acard-body{padding:24px 24px 20px}
+.fg{margin-bottom:14px}.fg label{display:block;font-size:13px;font-weight:700;color:#333;margin-bottom:5px}
+.fg input{width:100%;padding:11px 13px;border:1px solid #ccc;border-radius:4px;font-size:15px;color:#333;background:#fff;transition:border .15s,box-shadow .15s;font-family:inherit}
+.fg input:focus{outline:none;border-color:#3352a3;box-shadow:0 0 0 3px rgba(51,82,163,.1)}
+.row2{display:flex;gap:10px}.row2 .fg{flex:1}
+.fg.otp-fg input{letter-spacing:.15em;text-align:center}
+.btn-prim,.btn-sec{width:100%;border-radius:4px;padding:12px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;transition:opacity .15s;margin-bottom:10px}
+.btn-prim{background:#3352a3;color:#fff;border:none}.btn-prim:hover{opacity:.9}.btn-prim:disabled{background:#a3b4e0;cursor:not-allowed}
+.btn-sec{background:#fff;color:#3352a3;border:2px solid #3352a3}.btn-sec:hover{background:#f0f4ff}
+.m-err{background:#fff3f3;border:1px solid #fcc;border-radius:4px;color:#721c24;padding:10px 12px;font-size:13px;margin-bottom:14px;line-height:1.5}
+.m-ok{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;color:#14532d;padding:22px;font-size:14px;text-align:center;line-height:1.8}
+.divider{display:flex;align-items:center;gap:10px;margin:14px 0 4px;color:#aaa;font-size:12px}
+.divider span{flex:1;height:1px;background:#eee}
+.otp-hint{font-size:13px;color:#4a5568;margin-bottom:16px;line-height:1.6;text-align:center}
+.otp-target{font-weight:700;color:#3352a3}
+.section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#9ca3af;margin:16px 0 10px;padding-bottom:6px;border-bottom:1px solid #eee}
+.footer{background:#1a2849;color:#8895b5;margin-top:auto}.fi{max-width:1280px;margin:0 auto;padding:28px 20px;font-size:12px}
+.spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}@keyframes spin{to{transform:rotate(360deg)}}
+</style>
 </head><body>
-<div class="topbar"><div class="tb-in"><span style="opacity:.8">Text Size</span><button class="tb-btn" onclick="changeFont(-1)">-</button><button class="tb-btn" onclick="changeFont(0)">&#8635;</button><button class="tb-btn" onclick="changeFont(1)">+</button></div></div>
-<header class="site-header"><div class="nav-in"><a href="index.html"><img class="logo-img" src="https://memberportal-blob.libertydentalplan.com/C-Stacked-Horizontal.svg" alt="LIBERTY Dental Plan"></a><div class="nav-right"><button class="btn-emg" onclick="window.open('https://www.teledentistry.com/insurance/liberty','_blank','noopener')"><i class="fa-solid fa-tooth"></i> Dental Emergency</button></div></div></header>
-<main class="main"><section><h1 class="hero-title">Welcome to <span class="hero-acc">My Compass</span></h1><p class="hero-sub">This page has been aligned to the working structure, styles, and native authentication flow patterns used in your reference <strong>index.html</strong>.</p></section><section class="acard"><div class="acard-head"><i class="fa-solid fa-user-plus"></i> New Member Registration</div><div class="acard-body"><div id="err" class="m-err" style="display:none"></div><div id="step0"><div class="steps-row"><div class="step-item s-act"><div class="step-dot">1</div><div class="step-lbl">Your Details</div></div><div class="step-item s-idle"><div class="step-dot">2</div><div class="step-lbl">Verify Email</div></div><div class="step-item s-idle"><div class="step-dot">3</div><div class="step-lbl">Done</div></div></div><div style="display:flex;gap:10px"><div class="fg" style="flex:1"><label for="firstName">First Name</label><input id="firstName" type="text"></div><div class="fg" style="flex:1"><label for="lastName">Last Name</label><input id="lastName" type="text"></div></div><div class="fg"><label for="alias">Username Alias</label><input id="alias" type="text" placeholder="Preferred username (optional)"></div><div class="fg"><label for="jobTitle">Job Title</label><input id="jobTitle" type="text"></div><div style="display:flex;gap:10px"><div class="fg" style="flex:1"><label for="city">City</label><input id="city" type="text"></div><div class="fg" style="flex:1"><label for="country">Country</label><input id="country" type="text"></div></div><div class="fg"><label for="email">Email Address</label><input id="email" type="email" autocomplete="username"></div><div class="fg"><label for="pw">Create Password</label><input id="pw" type="password" autocomplete="new-password"></div><div class="fg"><label for="pwc">Confirm Password</label><input id="pwc" type="password" autocomplete="new-password"></div><button id="startReg" class="btn-prim">Sign Up</button></div><div id="step1" style="display:none"><div class="steps-row"><div class="step-item s-done"><div class="step-dot"><i class="fa-solid fa-check" style="font-size:9px"></i></div><div class="step-lbl">Your Details</div></div><div class="step-item s-act"><div class="step-dot">2</div><div class="step-lbl">Verify Email</div></div><div class="step-item s-idle"><div class="step-dot">3</div><div class="step-lbl">Done</div></div></div><p class="otp-hint">Check your inbox, we sent a code to<br><span class="otp-target" id="otpTarget"></span></p><div class="fg"><label for="otpInput">Verification Code</label><input id="otpInput" type="text" inputmode="numeric" maxlength="8" autocomplete="one-time-code"></div><button id="verifyOtp" class="btn-prim">Verify Email</button></div><div id="step2" style="display:none"><div class="m-ok"><div style="font-size:40px;margin-bottom:10px">✅</div><strong>Account Created!</strong><br>Welcome, <span id="successName"></span>. Your account is ready.<br><br><button class="btn-prim" onclick="location.href='signin.html'">Sign In Now</button></div></div></div></section></main>
-<footer class="footer"><div class="fi">LIBERTY Dental Plan</div></footer>
-<script src="./ld-config.js"></script><script src="./ld-native-auth.js"></script><script>function changeFont(d){const root=document.documentElement;const cur=parseFloat(getComputedStyle(root).fontSize)||16;root.style.fontSize=d===0?'16px':Math.min(20,Math.max(14,cur+d))+'px';}</script><script>(function(){const $=id=>document.getElementById(id);const steps=['step0','step1','step2'];let ct=null,email='',codeLen=8;function show(s){steps.forEach(id=>$(id).style.display=id===s?'block':'none');}function err(msg){$('err').style.display='block';$('err').textContent=msg;}function clearErr(){$('err').style.display='none';$('err').textContent='';}$('startReg').addEventListener('click',async()=>{clearErr();const firstName=$('firstName').value.trim();const lastName=$('lastName').value.trim();email=$('email').value.trim();const password=$('pw').value;const confirm=$('pwc').value;if(!firstName||!lastName)return err('Enter your first and last name.');if(!email.includes('@'))return err('Enter a valid email address.');if(password.length<8)return err('Password must be at least 8 characters.');if(password!==confirm)return err('Passwords do not match.');const attrs={displayName:`${firstName} ${lastName}`,givenName:firstName,surname:lastName,jobTitle:$('jobTitle').value.trim(),city:$('city').value.trim(),country:$('country').value.trim(),extension_alias:$('alias').value.trim()};$('startReg').disabled=true;try{const r1=await LDAuth.signUpStart(email,password,attrs);const r2=await LDAuth.signUpChallenge(r1.continuation_token||r1.continuationtoken);ct=r2.continuation_token||r2.continuationtoken;codeLen=r2.code_length||r2.codelength||8;$('otpTarget').textContent=r2.challenge_target_label||r2.challengetargetlabel||email;$('otpInput').maxLength=codeLen;show('step1');}catch(e){err(LDAuth.mapError(e));}finally{$('startReg').disabled=false;}});$('verifyOtp').addEventListener('click',async()=>{clearErr();const otp=$('otpInput').value.trim();if(otp.length<codeLen)return err('Enter the full verification code.');$('verifyOtp').disabled=true;try{const r=await LDAuth.signUpContinueOtp(ct,otp);const fct=r.continuation_token||r.continuationtoken||ct;try{const tok=await LDAuth.signUpToken(fct);LDToken.store({idToken:tok.id_token||tok.idtoken,accessToken:tok.access_token||tok.accesstoken,claims:LDAuth.jwtDecode(tok.id_token||tok.idtoken)});}catch(_){}$('successName').textContent=$('firstName').value.trim();show('step2');}catch(e){err(LDAuth.mapError(e));}finally{$('verifyOtp').disabled=false;}});})();</script>
+
+<div class="topbar"><div class="tb-in"><span style="opacity:.8">Text Size</span>
+<button class="tb-btn" onclick="changeFont(-1)">-</button>
+<button class="tb-btn" onclick="changeFont(0)">&#8635;</button>
+<button class="tb-btn" onclick="changeFont(1)">+</button>
+</div></div>
+
+<header class="site-header"><div class="nav-in">
+<a href="index.html"><img class="logo-img" src="https://memberportal-blob.libertydentalplan.com/C-Stacked-Horizontal.svg" alt="LIBERTY Dental Plan"></a>
+<div class="nav-right">
+  <button class="btn-emg" onclick="window.open('https://www.teledentistry.com/insurance/liberty','_blank','noopener')">
+    <i class="fa-solid fa-tooth"></i> Dental Emergency
+  </button>
+</div>
+</div></header>
+
+<main class="main">
+  <section>
+    <h1 class="hero-title">Welcome to <span class="hero-acc">My Compass</span></h1>
+    <p class="hero-sub">Create your member account to access dental benefits, claims, provider search, and more — all in one place.</p>
+  </section>
+
+  <section class="acard">
+    <div class="acard-head"><i class="fa-solid fa-user-plus"></i> New Member Registration</div>
+    <div class="acard-body">
+      <div id="err" class="m-err" style="display:none"></div>
+
+      <!-- Step 1: registration form -->
+      <div id="step0">
+        <div class="section-label">Personal Information</div>
+        <div class="row2">
+          <div class="fg"><label for="firstName">First Name</label><input id="firstName" type="text" autofocus></div>
+          <div class="fg"><label for="lastName">Last Name</label><input id="lastName" type="text"></div>
+        </div>
+        <div class="fg"><label for="alias">Preferred Username <span style="font-weight:400;color:#9ca3af">(optional)</span></label>
+          <input id="alias" type="text" placeholder="Leave blank to use email"></div>
+
+        <div class="section-label">Professional Details</div>
+        <div class="fg"><label for="jobTitle">Job Title</label><input id="jobTitle" type="text"></div>
+        <div class="row2">
+          <div class="fg"><label for="city">City</label><input id="city" type="text"></div>
+          <div class="fg"><label for="country">Country</label><input id="country" type="text"></div>
+        </div>
+
+        <div class="section-label">Account Credentials</div>
+        <div class="fg"><label for="email">Email Address</label><input id="email" type="email" autocomplete="username" placeholder="you@example.com"></div>
+        <div class="row2">
+          <div class="fg"><label for="pw">Password</label><input id="pw" type="password" autocomplete="new-password" placeholder="Min 8 characters"></div>
+          <div class="fg"><label for="pwc">Confirm</label><input id="pwc" type="password" autocomplete="new-password" placeholder="Repeat"></div>
+        </div>
+
+        <button id="startReg" class="btn-prim">
+          <span id="work" class="spin" style="display:none"></span>
+          Create Account
+        </button>
+        <div class="divider"><span></span>Already registered?<span></span></div>
+        <button class="btn-sec" onclick="location.href='signin.html'">Sign In</button>
+      </div>
+
+      <!-- Step 2: email verification -->
+      <div id="step1" style="display:none">
+        <p class="otp-hint">Check your inbox — we sent a code to<br><span id="otpTarget" class="otp-target"></span></p>
+        <div class="fg otp-fg">
+          <label for="otpInput">Verification Code</label>
+          <input id="otpInput" type="text" inputmode="numeric" maxlength="8" autocomplete="one-time-code">
+        </div>
+        <button id="verifyOtp" class="btn-prim">Verify Email &amp; Finish</button>
+      </div>
+
+      <!-- Step 3: success -->
+      <div id="step2" style="display:none">
+        <div class="m-ok">
+          <div style="font-size:44px;margin-bottom:12px">🎉</div>
+          <strong>Account Created!</strong><br>
+          Welcome, <span id="successName"></span>. Your account is ready.
+          <br><br>
+          <a href="signin.html" style="font-weight:700;color:#3352a3">Sign In to My Compass →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="fi">© LIBERTY Dental Plan. All rights reserved.</div></footer>
+
+<script src="./ld-config.js"></script>
+<script src="./ld-native-auth.js"></script>
+<script>function changeFont(d){const r=document.documentElement,c=parseFloat(getComputedStyle(r).fontSize)||16;r.style.fontSize=d===0?'16px':Math.min(20,Math.max(14,c+d))+'px';}</script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const steps=['step0','step1','step2'];
+  let ct=null, email='', codeLen=8;
+
+  function show(s){steps.forEach(id=>$(id).style.display=id===s?'block':'none');}
+  function showErr(msg){$('err').style.display='block';$('err').textContent=msg;}
+  function clearErr(){$('err').style.display='none';}
+
+  $('startReg').addEventListener('click',async()=>{
+    clearErr();
+    const firstName=$('firstName').value.trim();
+    const lastName=$('lastName').value.trim();
+    email=$('email').value.trim();
+    const password=$('pw').value;
+    const confirm=$('pwc').value;
+    if(!firstName||!lastName) return showErr('Please enter your first and last name.');
+    if(!email.includes('@')) return showErr('Please enter a valid email address.');
+    if(password.length<8) return showErr('Password must be at least 8 characters.');
+    if(password!==confirm) return showErr('Passwords do not match.');
+    $('startReg').disabled=true; $('work').style.display='inline-block';
+    const attrs={
+      displayName:`${firstName} ${lastName}`,
+      givenName:firstName,
+      surname:lastName,
+      jobTitle:$('jobTitle').value.trim(),
+      city:$('city').value.trim(),
+      country:$('country').value.trim(),
+      extension_alias:$('alias').value.trim()
+    };
+    try{
+      const r1=await LDAuth.signUpStart(email,password,attrs);
+      const r2=await LDAuth.signUpChallenge(r1.continuation_token||r1.continuationtoken);
+      ct=r2.continuation_token||r2.continuationtoken;
+      codeLen=r2.code_length||r2.codelength||8;
+      $('otpTarget').textContent=r2.challenge_target_label||r2.challengetargetlabel||email;
+      $('otpInput').maxLength=codeLen;
+      show('step1');
+    }catch(e){showErr(LDAuth.mapError(e));}
+    finally{$('startReg').disabled=false;$('work').style.display='none';}
+  });
+
+  $('verifyOtp').addEventListener('click',async()=>{
+    clearErr();
+    const otp=$('otpInput').value.trim();
+    if(otp.length<codeLen) return showErr('Please enter the full '+codeLen+'-digit verification code.');
+    $('verifyOtp').disabled=true;
+    try{
+      const r=await LDAuth.signUpContinueOtp(ct,otp);
+      const fct=r.continuation_token||r.continuationtoken||ct;
+      try{
+        const tok=await LDAuth.signUpToken(fct);
+        LDToken.store({
+          idToken:    tok.id_token||tok.idtoken,
+          accessToken:tok.access_token||tok.accesstoken,
+          claims:     LDAuth.jwtDecode(tok.id_token||tok.idtoken)
+        });
+      }catch(_){}
+      $('successName').textContent=$('firstName').value.trim();
+      show('step2');
+    }catch(e){showErr(LDAuth.mapError(e));}
+    finally{$('verifyOtp').disabled=false;}
+  });
+})();
+</script>
 </body></html>

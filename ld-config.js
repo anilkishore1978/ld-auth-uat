@@ -4,14 +4,14 @@ window.NACONFIG = {
   TENANTSUB: 'birlasoftdentalentra',
   PROXY: 'http://localhost:3002/proxy',
   SCOPES: 'openid profile email',
-  CHALTYPES: 'password oob redirect',
+  CHALTYPES: 'oob password redirect',
   pages: {
-    signin: 'signin.html',
-    register: 'registration.html',
-    forgotPassword: 'forgot-password.html',
-    forgotUsername: 'forgot-username.html',
-    callback: 'callback.html',
-    home: 'index.html'
+    signin:          'signin.html',
+    register:        'registration.html',
+    forgotPassword:  'forgot-password.html',
+    forgotUsername:  'forgot-username.html',
+    callback:        'callback.html',
+    home:            'dashboard.html'   // ← was 'dashbaord.html' (typo) and pointed nowhere
   }
 };
 window.LDCONFIG = window.NACONFIG;

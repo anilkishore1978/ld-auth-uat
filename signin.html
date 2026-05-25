@@ -1,28 +1,146 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>LIBERTY Dental Plan Member Portal - Sign In</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0} html{font-size:16px} body{font-family:Roboto,sans-serif;background:#edf1f8;min-height:100vh;color:#1a2340}
-    a{color:#3352a3;text-decoration:none} a:hover{text-decoration:underline}
-    .topbar{background:#3352a3;color:#fff;padding:5px 0} .tb-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:13px}
-    .tb-btn{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;cursor:pointer;border-radius:3px;width:24px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
-    .site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.09);position:sticky;top:0;z-index:10}
-    .nav-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}.logo-img{height:48px;display:block}.nav-right{display:flex;align-items:center;gap:8px}
-    .btn-emg{background:none;border:2px solid #3352a3;color:#3352a3;border-radius:4px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
-    .main{max-width:1280px;margin:0 auto;padding:44px 20px 60px;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:start}@media (max-width:960px){.main{grid-template-columns:1fr;gap:24px}}
-    .hero-title{font-family:Nunito,sans-serif;font-size:clamp(32px,4vw,50px);font-weight:900;color:#1a2340;line-height:1.12;margin-bottom:14px}.hero-acc{color:#602D86}.hero-sub{font-size:15px;color:#4a5568;line-height:1.85;max-width:520px;margin-bottom:24px}
-    .acard{background:#fff;border-radius:10px;box-shadow:0 4px 28px rgba(51,82,163,.12);overflow:hidden}.acard-head{background:#3352a3;color:#fff;padding:14px 22px;text-align:center;font-size:17px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:8px}.acard-body{padding:22px 24px 20px}
-    .fg{margin-bottom:14px}.fg label{display:block;font-size:13px;font-weight:700;color:#333;margin-bottom:5px}.fg input{width:100%;padding:10px 13px;border:1px solid #ccc;border-radius:4px;font-size:15px;color:#333;background:#fff;transition:border .15s,box-shadow .15s;font-family:inherit}.fg input:focus{outline:none;border-color:#3352a3;box-shadow:0 0 0 3px rgba(51,82,163,.1)}
-    .btn-prim,.btn-sec{width:100%;border-radius:4px;padding:11px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit}.btn-prim{background:#3352a3;color:#fff;border:none}.btn-prim:disabled{background:#a3b4e0;cursor:not-allowed}.btn-sec{background:#fff;color:#3352a3;border:2px solid #3352a3}
-    .m-err{background:#fff3f3;border:1px solid #fcc;border-radius:4px;color:#721c24;padding:10px 12px;font-size:13px;margin-bottom:12px;line-height:1.5}.m-ok{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;color:#14532d;padding:16px;font-size:14px;text-align:center;line-height:1.7}.m-info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;color:#1e40af;padding:11px 13px;font-size:13px;line-height:1.6;margin-bottom:13px}
-    .otp-hint{text-align:center;font-size:13px;color:#555;margin-bottom:12px;line-height:1.5}.otp-target{font-weight:700;color:#3352a3}.steps-row{display:flex;align-items:center;margin-bottom:20px}.step-item{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;position:relative}.step-item:not(:last-child)::after{content:'';position:absolute;top:11px;left:50%;width:100%;height:1px;background:#e0e0e0;z-index:0}.step-dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;z-index:1}.s-done .step-dot,.s-act .step-dot{background:#3352a3;color:#fff}.s-idle .step-dot{background:#e8e8e8;color:#aaa}.step-lbl{font-size:10px;font-weight:600;color:#aaa;white-space:nowrap}.s-done .step-lbl,.s-act .step-lbl{color:#3352a3}
-    .footer{background:#1a2849;color:#8895b5;margin-top:auto}.fi{max-width:1280px;margin:0 auto;padding:28px 20px;font-size:12px}.spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}@keyframes spin{to{transform:rotate(360deg)}}
-  </style>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>LIBERTY Dental Plan Member Portal - Sign In</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:Roboto,sans-serif;background:#edf1f8;min-height:100vh;color:#1a2340}
+a{color:#3352a3;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#3352a3;color:#fff;padding:5px 0}.tb-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:13px}
+.tb-btn{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;cursor:pointer;border-radius:3px;width:24px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+.site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.09);position:sticky;top:0;z-index:10}
+.nav-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}.logo-img{height:48px;display:block}.nav-right{display:flex;align-items:center;gap:8px}
+.btn-emg{background:none;border:2px solid #3352a3;color:#3352a3;border-radius:4px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.main{max-width:1280px;margin:0 auto;padding:44px 20px 60px;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:start}@media(max-width:960px){.main{grid-template-columns:1fr;gap:24px}}
+.hero-title{font-family:Nunito,sans-serif;font-size:clamp(32px,4vw,50px);font-weight:900;color:#1a2340;line-height:1.12;margin-bottom:14px}.hero-acc{color:#602D86}
+.hero-sub{font-size:15px;color:#4a5568;line-height:1.85;max-width:520px;margin-bottom:24px}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.feature-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:#4a5568}
+.feature-list li i{color:#3352a3;width:18px;text-align:center}
+.acard{background:#fff;border-radius:10px;box-shadow:0 4px 28px rgba(51,82,163,.12);overflow:hidden}
+.acard-head{background:#3352a3;color:#fff;padding:16px 22px;text-align:center;font-size:17px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:8px}
+.acard-body{padding:24px 24px 20px}
+.fg{margin-bottom:16px}.fg label{display:block;font-size:13px;font-weight:700;color:#333;margin-bottom:5px}
+.fg input{width:100%;padding:11px 13px;border:1px solid #ccc;border-radius:4px;font-size:15px;color:#333;background:#fff;transition:border .15s,box-shadow .15s;font-family:inherit}
+.fg input:focus{outline:none;border-color:#3352a3;box-shadow:0 0 0 3px rgba(51,82,163,.1)}
+.btn-prim,.btn-sec{width:100%;border-radius:4px;padding:12px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;transition:opacity .15s}
+.btn-prim{background:#3352a3;color:#fff;border:none}.btn-prim:hover{opacity:.9}.btn-prim:disabled{background:#a3b4e0;cursor:not-allowed}
+.btn-sec{background:#fff;color:#3352a3;border:2px solid #3352a3}.btn-sec:hover{background:#f0f4ff}
+.m-err{background:#fff3f3;border:1px solid #fcc;border-radius:4px;color:#721c24;padding:10px 12px;font-size:13px;margin-bottom:14px;line-height:1.5}
+.divider{display:flex;align-items:center;gap:10px;margin:16px 0;color:#aaa;font-size:12px}
+.divider span{flex:1;height:1px;background:#eee}
+.footer{background:#1a2849;color:#8895b5;margin-top:auto}.fi{max-width:1280px;margin:0 auto;padding:28px 20px;font-size:12px}
+.spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}@keyframes spin{to{transform:rotate(360deg)}}
+</style>
 </head><body>
-<div class="topbar"><div class="tb-in"><span style="opacity:.8">Text Size</span><button class="tb-btn" onclick="changeFont(-1)">-</button><button class="tb-btn" onclick="changeFont(0)">&#8635;</button><button class="tb-btn" onclick="changeFont(1)">+</button></div></div>
-<header class="site-header"><div class="nav-in"><a href="index.html"><img class="logo-img" src="https://memberportal-blob.libertydentalplan.com/C-Stacked-Horizontal.svg" alt="LIBERTY Dental Plan"></a><div class="nav-right"><button class="btn-emg" onclick="window.open('https://www.teledentistry.com/insurance/liberty','_blank','noopener')"><i class="fa-solid fa-tooth"></i> Dental Emergency</button></div></div></header>
-<main class="main"><section><h1 class="hero-title">Welcome to <span class="hero-acc">My Compass</span></h1><p class="hero-sub">This page has been aligned to the working structure, styles, and native authentication flow patterns used in your reference <strong>index.html</strong>.</p></section><section class="acard"><div class="acard-head"><i class="fa-solid fa-shield-halved"></i> Member Login</div><div class="acard-body"><div class="steps-row"><div class="step-item s-act"><div class="step-dot">1</div><div class="step-lbl">Your Identity</div></div><div class="step-item s-idle"><div class="step-dot">2</div><div class="step-lbl">Verification</div></div></div><div id="err" class="m-err" style="display:none"></div><div class="fg"><label for="signInName">Email Address or Username</label><input id="signInName" type="text" placeholder="you@example.com or username" autocomplete="username" autofocus></div><div class="fg"><label for="password">Password</label><input id="password" type="password" placeholder="Your password" autocomplete="current-password"></div><button id="next" class="btn-prim"><span id="work" class="spin" style="display:none"></span>Login</button><div style="display:flex;justify-content:space-between;margin-top:12px;font-size:13px"><a href="forgot-password.html">Forgot Password?</a><a href="forgot-username.html">Forgot Username?</a></div><div style="display:flex;align-items:center;gap:10px;margin:14px 0;color:#ccc;font-size:12px"><span style="flex:1;height:1px;background:#eee"></span>New Member?<span style="flex:1;height:1px;background:#eee"></span></div><button class="btn-sec" onclick="location.href='registration.html'">Register Now</button></div></section></main>
-<footer class="footer"><div class="fi">LIBERTY Dental Plan</div></footer>
-<script src="./ld-config.js"></script><script src="./ld-native-auth.js"></script><script>function changeFont(d){const root=document.documentElement;const cur=parseFloat(getComputedStyle(root).fontSize)||16;root.style.fontSize=d===0?'16px':Math.min(20,Math.max(14,cur+d))+'px';}</script><script>(function(){const $=id=>document.getElementById(id);function err(msg){$('err').style.display='block';$('err').textContent=msg;}function clearErr(){$('err').style.display='none';$('err').textContent='';}$('next').addEventListener('click',async()=>{clearErr();const username=$('signInName').value.trim();const password=$('password').value;if(!username)return err('Enter your email address or username.');if(!password)return err('Enter your password.');$('next').disabled=true;$('work').style.display='inline-block';try{const init=await LDAuth.signInInitiate(username);const chal=await LDAuth.signInChallenge(init.continuation_token||init.continuationtoken);const ct=chal.continuation_token||chal.continuationtoken;const type=chal.challenge_type||chal.challengetype||'password';if(type==='oob'){sessionStorage.setItem('ld_signin_pending',JSON.stringify({ct,username,len:chal.code_length||chal.codelength||8,target:chal.challenge_target_label||chal.challengetargetlabel||username}));location.href='callback.html?flow=signin-otp';return;}const tokens=await LDAuth.signInWithPassword(ct,password);LDToken.store({idToken:tokens.id_token||tokens.idtoken,accessToken:tokens.access_token||tokens.accesstoken,claims:LDAuth.jwtDecode(tokens.id_token||tokens.idtoken)});location.href='callback.html';}catch(e){err(LDAuth.mapError(e));}finally{$('next').disabled=false;$('work').style.display='none';}});})();</script>
+
+<div class="topbar"><div class="tb-in"><span style="opacity:.8">Text Size</span>
+<button class="tb-btn" onclick="changeFont(-1)">-</button>
+<button class="tb-btn" onclick="changeFont(0)">&#8635;</button>
+<button class="tb-btn" onclick="changeFont(1)">+</button>
+</div></div>
+
+<header class="site-header"><div class="nav-in">
+<a href="index.html"><img class="logo-img" src="https://memberportal-blob.libertydentalplan.com/C-Stacked-Horizontal.svg" alt="LIBERTY Dental Plan"></a>
+<div class="nav-right">
+  <button class="btn-emg" onclick="window.open('https://www.teledentistry.com/insurance/liberty','_blank','noopener')">
+    <i class="fa-solid fa-tooth"></i> Dental Emergency
+  </button>
+</div>
+</div></header>
+
+<main class="main">
+  <!-- Hero -->
+  <section>
+    <h1 class="hero-title">Welcome to <span class="hero-acc">My Compass</span></h1>
+    <p class="hero-sub">Access your dental benefits, find providers, view claims, and manage your plan — all in one place.</p>
+    <ul class="feature-list">
+      <li><i class="fa-solid fa-shield-halved"></i> Secure, member-only access</li>
+      <li><i class="fa-solid fa-file-medical"></i> View and track your claims</li>
+      <li><i class="fa-solid fa-location-dot"></i> Find in-network providers near you</li>
+      <li><i class="fa-solid fa-id-card"></i> Download your member ID card</li>
+    </ul>
+  </section>
+
+  <!-- Login card -->
+  <section class="acard">
+    <div class="acard-head"><i class="fa-solid fa-shield-halved"></i> Member Login</div>
+    <div class="acard-body">
+      <div id="err" class="m-err" style="display:none"></div>
+
+      <div class="fg">
+        <label for="signInName">Email Address or Username</label>
+        <input id="signInName" type="text" placeholder="you@example.com or username" autocomplete="username" autofocus>
+      </div>
+      <div class="fg">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Your password" autocomplete="current-password">
+      </div>
+
+      <button id="next" class="btn-prim">
+        <span id="work" class="spin" style="display:none"></span>
+        Login
+      </button>
+
+      <div style="display:flex;justify-content:space-between;margin-top:14px;font-size:13px">
+        <a href="forgot-password.html">Forgot Password?</a>
+        <a href="forgot-username.html">Forgot Username?</a>
+      </div>
+
+      <div class="divider"><span></span>New Member?<span></span></div>
+      <button class="btn-sec" onclick="location.href='registration.html'">Register Now</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="fi">© LIBERTY Dental Plan. All rights reserved.</div></footer>
+
+<script src="./ld-config.js"></script>
+<script src="./ld-native-auth.js"></script>
+<script>function changeFont(d){const r=document.documentElement,c=parseFloat(getComputedStyle(r).fontSize)||16;r.style.fontSize=d===0?'16px':Math.min(20,Math.max(14,c+d))+'px';}</script>
+<script>
+(function(){
+  // If already logged in, go straight to dashboard
+  if(LDToken.isAuthenticated()) { location.replace('dashboard.html'); return; }
+
+  const $=id=>document.getElementById(id);
+  function showErr(msg){$('err').style.display='block';$('err').textContent=msg;}
+  function clearErr(){$('err').style.display='none';}
+
+  $('next').addEventListener('click', async()=>{
+    clearErr();
+    const username=$('signInName').value.trim();
+    const password=$('password').value;
+    if(!username) return showErr('Please enter your email address or username.');
+    if(!password) return showErr('Please enter your password.');
+    $('next').disabled=true; $('work').style.display='inline-block';
+    try{
+      const init=await LDAuth.signInInitiate(username);
+      const chal=await LDAuth.signInChallenge(init.continuation_token||init.continuationtoken);
+      const ct=chal.continuation_token||chal.continuationtoken;
+      const type=(chal.challenge_type||chal.challengetype||'password').toLowerCase();
+      if(type==='oob'){
+        sessionStorage.setItem('ld_signin_pending',JSON.stringify({
+          ct, username,
+          len: chal.code_length||chal.codelength||8,
+          target: chal.challenge_target_label||chal.challengetargetlabel||username
+        }));
+        location.href='callback.html?flow=signin-otp';
+        return;
+      }
+      const tokens=await LDAuth.signInWithPassword(ct,password);
+      LDToken.store({
+        idToken:    tokens.id_token||tokens.idtoken,
+        accessToken:tokens.access_token||tokens.accesstoken,
+        claims:     LDAuth.jwtDecode(tokens.id_token||tokens.idtoken)
+      });
+      location.href='dashboard.html';
+    }catch(e){showErr(LDAuth.mapError(e));}
+    finally{$('next').disabled=false;$('work').style.display='none';}
+  });
+
+  // Allow Enter key on password field
+  document.getElementById('password').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('next').click();});
+})();
+</script>
 </body></html>
