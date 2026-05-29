@@ -1,7 +1,7 @@
 window.NACONFIG = {
-  CLIENTID: 'e753b436-8925-4578-a5ad-eedc0f614ce7',
-  TENANTID: '5b1ad472-26a6-4a51-b81d-833eb428e9a7',
-  TENANTSUB: 'anilkishore1978',
+  CLIENTID: 'd1141f25-2729-4ea5-9892-f80db4205ebf',
+  TENANTID: '36090fda-8a83-4040-8c58-7cf784511505',
+  TENANTSUB: 'birlasoftdentalentra',
   PROXY: 'http://localhost:3002/proxy',
   SCOPES: 'openid profile email',
   CHALTYPES: 'oob password redirect',
